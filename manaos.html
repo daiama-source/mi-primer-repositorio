@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManaosApp - Viajes a Manaos</title>
+    <style>
+        /* ========== ESTILOS GENERALES ========== */
+        body {
+            background-color: #0d1b2a;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #f5c518;
+        }
+
+        a {
+            color: #f5c518;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ffdd44;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(245, 197, 24, 0.3);
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 0 20px rgba(245, 197, 24, 0.1);
+        }
+
+        /* ========== ESTILO PARA LAS ATRACCIONES (FLEXBOX) ========== */
+        .atraccion {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background-color: rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid #f5c518;
+            transition: 0.3s;
+        }
+        .atraccion:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            transform: scale(1.01);
+        }
+
+        .atraccion-imagen {
+            flex: 0 0 220px;
+            text-align: center;
+        }
+        .atraccion-imagen img {
+            width: 100%;
+            border-radius: 8px;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .atraccion-texto {
+            flex: 1;
+        }
+        .atraccion-texto h3 {
+            margin-top: 0;
+            color: #f5c518;
+        }
+
+        .atraccion.reverse {
+            flex-direction: row-reverse;
+            border-left: none;
+            border-right: 4px solid #f5c518;
+        }
+
+        /* ========== FORMULARIO ========== */
+        input, button {
+            background-color: #1a2a3a;
+            color: #f0f0f0;
+            border: 2px solid #f5c518;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        input:focus {
+            outline: none;
+            border-color: #ffdd44;
+            box-shadow: 0 0 10px #f5c51866;
+        }
+        button {
+            background-color: #f5c518;
+            color: #0d1b2a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ffdd44;
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #f5c51844;
+            margin-top: 40px;
+        }
+
+        hr {
+            border: 1px solid #f5c51844;
+            margin: 20px 0;
+        }
+
+        fieldset {
+            border: 2px solid #f5c51866;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        legend {
+            color: #f5c518;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: inline-block;
+            margin: 8px 15px 8px 0;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .atraccion, .atraccion.reverse {
+                flex-direction: column !important;
+                text-align: center;
+                border-left: 4px solid #f5c518;
+                border-right: none;
+            }
+            .atraccion-imagen {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            .atraccion-imagen img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== MAIN ==================== -->
+    <main>
+    <section>
+        <h1>🌴 Manaos</h1>
+        <h2>El corazón del Amazonas</h2>
+
+        <a href="imagenes/manaus.jpg">
+    <img src="imagenes/manaus.jpg" alt="Teatro Amazonas" width="400" />
+</a>
+    </section>
+    <!-- ==================== SECCIÓN 1: Manaos ==================== -->
+    <section>
+        <p>Descubre <a href="https://www.tripadvisor.com.ar/Tourism-g303235-Manaus_Amazon_River_State_of_Amazonas-Vacations.html" target="_blank">lugares increíbles en Manaos</a> aquí.</p>
+    </section>
+
+    <!-- ==================== SECCIÓN 2: Listas de Manaos ==================== -->
+    <section>
+        <h2>Qué hacer en Manaos</h2>
+
+        <h3>Atracciones imperdibles:</h3>
+        <ul>
+            <li>Teatro Amazonas</li>
+            <li>Encuentro de las Aguas</li>
+            <li>Mercado Municipal Adolpho Lisboa</li>
+            <li>Avistamiento de delfines rosados</li>
+            <li>Gastronomía amazónica</li>
+        </ul>
+
+        <figure>
+            <img src="imagenes/encuentro-aguas.jpg" alt="Encuentro de las Aguas" width="250" />
+            <figcaption>Los viajeros <em>aman</em> el Encuentro de las Aguas.</figcaption>
+        </figure>
+
+        <h3>Top 3 consejos para viajar a Manaos:</h3>
+        <ol>
+            <li>Llevar repelente de mosquitos</li>
+            <li>Visitar en la época seca (julio - noviembre)</li>
+            <li>Probar el pescado regional (tambaquí)</li>
+        </ol>
+
+        <figure>
+            <img src="imagenes/tambaquí.jpg" alt="Tambaquí" width="250" />
+            <figcaption>Uno de los pescados <strong>más apreciados</strong> de la Amazonía.</figcaption>
+        </figure>
+    </section>
+
+    <!-- ==================== ATRACCIONES DE MANAOS ==================== -->
+    <section>
+        <h2>Atracciones destacadas de Manaos</h2>
+
+        <!-- 1. TEATRO AMAZONAS (foto izquierda) -->
+        <div class="atraccion">
+            <div class="atraccion-imagen">
+                <img src="imagenes/teatro-amazonas.jpg" alt="Teatro Amazonas" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>Teatro Amazonas</h3>
+                <p><strong>Descripción:</strong> El Teatro Amazonas es el símbolo más emblemático de Manaos. Inaugurado en 1896 durante el auge del caucho, es un majestuoso teatro de ópera con una cúpula de 36.000 azulejos pintados a mano. Es considerado uno de los teatros más bellos de Brasil.</p>
+            </div>
+        </div>
+
+        <!-- 2. ENCUENTRO DE LAS AGUAS (foto derecha) -->
+        <div class="atraccion reverse">
+            <div class="atraccion-imagen">
+                <img src="imagenes/encuentro-aguas.jpg" alt="Encuentro de las Aguas" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>Encuentro de las Aguas</h3>
+                <p><strong>Descripción:</strong> Uno de los fenómenos naturales más impresionantes del mundo. Aquí se encuentran el río Negro (agua oscura) y el río Solimões (agua clara), que fluyen juntos sin mezclarse por varios kilómetros. Se puede observar desde barcos turísticos.</p>
+            </div>
+        </div>
+
+        <!-- 3. MERCADO MUNICIPAL (foto izquierda) -->
+        <div class="atraccion">
+            <div class="atraccion-imagen">
+                <img src="imagenes/Mercado-Municipal.jpg" alt="Mercado Municipal" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>Mercado Municipal Adolpho Lisboa</h3>
+                <p><strong>Descripción:</strong> Inaugurado en 1882, este mercado de estilo art nouveau es el lugar perfecto para sumergirse en la cultura local. Ofrece pescados del Amazonas, frutas exóticas, artesanías y especias. Fue inspirado en el mercado de Les Halles de París.</p>
+            </div>
+        </div>
+
+        <!-- 4. GASTRONOMÍA AMAZÓNICA (NUEVO - foto derecha) -->
+        <div class="atraccion reverse">
+            <div class="atraccion-imagen">
+                <img src="imagenes/gastronomía-Amazónica.jpg" alt="Gastronomía Amazónica" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>🍲 Gastronomía Amazónica</h3>
+                <p><strong>Descripción:</strong> La cocina amazónica es una explosión de sabores. Platos imperdibles: el <strong>tambaquí</strong> (pescado asado en hoja de bijao), el <strong>juane</strong> (arroz con carne envuelto en hojas), la <strong>sopa de cará</strong> y el famoso <strong>tacacá</strong> (caldo de yuca con camarones). Para beber, probá el <strong>chicha de yuca</strong> y el <strong>refresco de copoazú</strong>. Una experiencia que despierta todos los sentidos.</p>
+            </div>
+        </div>
+
+        <!-- 5. DELFINES ROSADOS (NUEVO - foto izquierda) -->
+        <div class="atraccion">
+            <div class="atraccion-imagen">
+                <img src="imagenes/delfines-rosados.jpg" alt="Delfines Rosados del Amazonas" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>🐬 Delfines Rosados del Amazonas</h3>
+                <p><strong>Descripción:</strong> El <strong>delfín rosado</strong> o <em>bufeo</em> es una de las criaturas más mágicas del Amazonas. Se pueden avistar en los ríos cercanos a Manaos, especialmente en el <strong>Encuentro de las Aguas</strong> y en la <strong>Reserva de Mamirauá</strong>. Son delfines de río de color rosado que, según la leyenda, se transforman en hombres para seducir a las mujeres locales. Una excursión para verlos es una experiencia inolvidable.</p>
+            </div>
+        </div>
+
+        <!-- 6. COMUNIDADES ORIGINARIAS (NUEVO - foto derecha) -->
+        <div class="atraccion reverse">
+            <div class="atraccion-imagen">
+                <img src="imagenes/Comunidades-Originarias.jpg" alt="Comunidades Originarias del Amazonas" />
+            </div>
+            <div class="atraccion-texto">
+                <h3>🏹 Comunidades Originarias del Amazonas</h3>
+                <p><strong>Descripción:</strong> Convivir con las comunidades indígenas de la Amazonia es una experiencia transformadora. Se puede visitar la <strong>comunidad Ticuna</strong> o la <strong>comunidad Dessana</strong>, donde te reciben con danzas tradicionales, te muestran su artesanía, te explican sus costumbres y comparten su cosmovisión. Es una oportunidad única para entender la relación sagrada entre el hombre y la selva. Vivir una noche en una maloca es inolvidable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN 3: Formulario de viaje ==================== -->
+    <section>
+        <h2>Planifica tu viaje a Manaos</h2>
+
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+
+            <input type="text" name="fotourl" placeholder="URL de tu foto en Manaos" required />
+            <button type="submit">Enviar</button>
+
+            <fieldset>
+                <legend>¿Qué tipo de viaje prefieres?</legend>
+                <label>
+                    <input type="radio" name="tipo-viaje" value="aventura" id="aventura" checked />
+                    Aventura
+                </label>
+                <label>
+                    <input type="radio" name="tipo-viaje" value="cultural" id="cultural" />
+                    Cultural
+                </label>
+                <label>
+                    <input type="radio" name="tipo-viaje" value="relax" id="relax" />
+                    Relax
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Qué actividades te interesan?</legend>
+
+                <input type="checkbox" name="actividad" value="selva" id="selva" checked />
+                <label for="selva">Selva amazónica</label>
+
+                <input type="checkbox" name="actividad" value="historia" id="historia" />
+                <label for="historia">Historia y cultura</label>
+
+                <input type="checkbox" name="actividad" value="gastronomia" id="gastronomia" />
+                <label for="gastronomia">Gastronomía</label>
+
+                <input type="checkbox" name="actividad" value="delfines" id="delfines" />
+                <label for="delfines">Delfines rosados</label>
+            </fieldset>
+        </form>
+    </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+        <p>Sin copyright - <a href="https://www.iesmb.edu.ar/bel/">freeCodeCamp.org</a></p>
+    </footer>
+
+</body>
+</html>
