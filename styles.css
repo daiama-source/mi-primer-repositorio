@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f8;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin: 12px 0;
+}
+
+.hide {
+  display: none;
+}
